@@ -1,38 +1,27 @@
-const form = document.getElementById("chat-form");
-const input = document.getElementById("user-input");
-const chatBox = document.getElementById("chat-box");
+function sendMessage() {
+  const userInput = document.getElementById("userInput");
+  const message = userInput.value.trim();
+  if (message === "") return;
 
-form.addEventListener("submit", function (e) {
-  e.preventDefault();
-  const userText = input.value.trim();
-  if (userText === "") return;
+  const messagesContainer = document.getElementById("messages");
 
-  appendMessage(userText, "user");
+  // User message
+  const userMsg = document.createElement("div");
+  userMsg.classList.add("message", "user");
+  userMsg.textContent = message;
+  messagesContainer.appendChild(userMsg);
 
-  setTimeout(() => {
-    const botReply = getBotReply(userText);
-    appendMessage(botReply, "bot");
-  }, 800);
+  // Bot response
+  const botMsg = document.createElement("div");
+  botMsg.classList.add("message", "bot");
+  botMsg.textContent = "Thanks for sharing. I'm here with you. ❤️";
+  messagesContainer.appendChild(botMsg);
 
-  input.value = "";
+  userInput.value = "";
+  messagesContainer.scrollTop = messagesContainer.scrollHeight;
+}
+
+// Toggle theme
+document.getElementById("themeToggle").addEventListener("change", function () {
+  document.body.classList.toggle("light-mode");
 });
-
-function appendMessage(text, sender) {
-  const msgDiv = document.createElement("div");
-  msgDiv.classList.add("message", sender);
-  msgDiv.textContent = text;
-  chatBox.appendChild(msgDiv);
-  chatBox.scrollTop = chatBox.scrollHeight;
-}
-
-function getBotReply(text) {
-  // Simple dummy responses
-  const lower = text.toLowerCase();
-  if (lower.includes("hi") || lower.includes("hello"))
-    return "Hey there! 👋 How can I assist you emotionally?";
-  if (lower.includes("sad"))
-    return "I'm here for you 💙. Want to talk about it?";
-  if (lower.includes("happy"))
-    return "That's great! 😊 What made you feel happy?";
-  return "I'm still learning emotional intelligence. Try asking me something else!";
-}
