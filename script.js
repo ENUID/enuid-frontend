@@ -1,4 +1,3 @@
-// script.js
 function learnMore() {
-  alert("Welcome to ENUID – Emotional AI meets Innovation 💡");
+  alert("🚀 ENUID is on a mission to build emotionally aware AI!");
 }
