@@ -1,78 +1,77 @@
-/* Reset */
-* {
+body {
+  font-family: Arial, sans-serif;
+  background: #0f2027;
+  background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+  color: #fff;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-body {
-  font-family: "Segoe UI", sans-serif;
-  background: linear-gradient(to right, #141e30, #243b55);
-  color: #fff;
-  line-height: 1.6;
-  padding: 2rem;
-}
-
-.container {
-  max-width: 900px;
-  margin: auto;
-}
-
-header {
-  text-align: center;
-  margin-bottom: 3rem;
+.chat-container {
+  width: 90%;
+  max-width: 600px;
+  background: #1a1a2e;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 h1 {
-  font-size: 3.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.hero {
-  background: rgba(255, 255, 255, 0.05);
-  padding: 2rem;
-  border-radius: 10px;
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 20px;
+  color: #00f5ff;
 }
 
-.hero button {
-  margin-top: 1rem;
-  padding: 10px 25px;
-  background-color: #00c9ff;
+.chat-box {
+  height: 400px;
+  overflow-y: auto;
+  background: #16213e;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.message {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 80%;
+}
+
+.user {
+  background-color: #00adb5;
+  align-self: flex-end;
+  text-align: right;
+  margin-left: auto;
+}
+
+.bot {
+  background-color: #393e46;
+  align-self: flex-start;
+}
+
+form {
+  display: flex;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 10px;
   border: none;
   border-radius: 8px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #00f5ff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
   color: #000;
   font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.hero button:hover {
-  background-color: #92fe9d;
-}
-
-section {
-  margin-bottom: 2rem;
-}
-
-.features ul {
-  list-style-type: none;
-  padding-left: 0;
-}
-
-.features li {
-  padding: 8px 0;
-}
-
-a {
-  color: #00f5ff;
-  text-decoration: none;
-}
-
-footer {
-  text-align: center;
-  margin-top: 3rem;
-  font-size: 0.9rem;
-  opacity: 0.7;
+  margin-left: 10px;
 }

@@ -3,51 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ENUID | Emotional AI</title>
+    <title>ENUID Chat</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
-      <header>
-        <h1>🧠 ENUID</h1>
-        <p>Emotional Neural Understanding Intelligence Development</p>
-      </header>
-
-      <section class="hero">
-        <h2>Revolutionizing Human Emotion with AI</h2>
-        <p>We’re building AI that *understands* you.</p>
-        <button onclick="learnMore()">Learn More</button>
-      </section>
-
-      <section class="about">
-        <h2>About ENUID</h2>
-        <p>
-          We are a team of innovators building intelligent systems that feel,
-          understand, and grow with you emotionally.
-        </p>
-      </section>
-
-      <section class="features">
-        <h2>Core Features</h2>
-        <ul>
-          <li>🧠 Real-time Emotion Recognition</li>
-          <li>🔁 Adaptive Neural Feedback Loops</li>
-          <li>🌐 Multi-Language Understanding</li>
-          <li>🤝 Personalized Empathy Modules</li>
-        </ul>
-      </section>
-
-      <section class="contact">
-        <h2>Contact Us</h2>
-        <p>
-          Email us at
-          <a href="mailto:enuid.neural@gmail.com">enuid.neural@gmail.com</a>
-        </p>
-      </section>
-
-      <footer>
-        <p>&copy; 2025 ENUID. All rights reserved.</p>
-      </footer>
+    <div class="chat-container">
+      <h1>🧠 ENUID AI Assistant</h1>
+      <div class="chat-box" id="chat-box">
+        <!-- Chat messages will show here -->
+      </div>
+      <form id="chat-form">
+        <input
+          type="text"
+          id="user-input"
+          placeholder="Ask ENUID something..."
+          autocomplete="off"
+          required
+        />
+        <button type="submit">Send</button>
+      </form>
     </div>
 
     <script src="script.js"></script>
